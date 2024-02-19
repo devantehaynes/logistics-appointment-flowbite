@@ -1,6 +1,7 @@
 import { FilesIcon, MoreVerticalIcon, PlusIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import CreateAppointmentPage from "./components/create/page";
 
 const invoices = [
   {
@@ -242,7 +243,7 @@ const invoices = [
 
 export default function Home() {
   return (
-    <section className="bg-gray-50 dark:bg-gray-900 py-3 sm:py-5">
+    <section className="bg-gray-50 dark:bg-gray-900 py-3 sm:py-5 h-screen">
       <div className="mx-auto max-w-screen-2xl px-4 lg:px-12">
         {/* <!-- Start coding here --> */}
         <div className="bg-white dark:bg-gray-800 relative shadow-md sm:rounded-lg overflow-hidden">
@@ -475,7 +476,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="flex flex-col items-stretch justify-end flex-shrink-0 w-full pb-4 md:pb-0 md:w-auto md:flex-row md:items-center md:space-x-3">
-                <button
+                {/* <button
                   type="button"
                   className=" px-4 py-2 text-sm font-medium text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
                 >
@@ -486,7 +487,8 @@ export default function Home() {
                     <PlusIcon className="mr-2" />
                     Create appointment
                   </a>
-                </button>
+                </button> */}
+                <CreateAppointmentPage />
               </div>
             </div>
             <div className="flex flex-wrap pt-1 pb-4 border-t dark:border-gray-700">
