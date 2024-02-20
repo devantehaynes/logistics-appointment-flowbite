@@ -48,198 +48,223 @@ const invoices = [
   },
 ];
 
-// interface tableRowProps() {
-//   apptID: string(),
-// }
+export enum Status {
+  request = "request",
+  approved = "approved",
+  declined = "declined",
+  checked_in = "checked in",
+  completed = "completed",
+}
 
-// function tableRow(props: tableRowProps) {
-//   return(<tr
-//     className="hidden flex-1 overflow-x-auto w-full"
-//     id="table-column-body-0"
-//     aria-labelledby="table-column-header-0"
-//   >
-//     <td className="p-4 border-b dark:border-gray-700">
-//       <div className="grid grid-cols-4 gap-4 mb-4">
-//         <div className="relative p-2 bg-gray-100 rounded-lg sm:w-full h-32 sm:h-36 dark:bg-gray-700 flex items-center justify-center">
-//           <img
-//             src="https://flowbite.s3.amazonaws.com/blocks/application-ui/appointments/imac-front-image.png"
-//             alt="iMac Front Image"
-//             className="h-full w-auto"
-//           />
-//         </div>
-//         <div className="relative p-2 bg-gray-100 rounded-lg sm:w-full h-32 sm:h-36 dark:bg-gray-700 flex items-center justify-center">
-//           <img
-//             src="https://flowbite.s3.amazonaws.com/blocks/application-ui/appointments/imac-side-image.png"
-//             alt="iMac Side Image"
-//             className="h-full w-auto"
-//           />
-//         </div>
-//         <div className="relative p-2 bg-gray-100 rounded-lg sm:w-full h-32 sm:h-36 dark:bg-gray-700 flex items-center justify-center">
-//           <img
-//             src="https://flowbite.s3.amazonaws.com/blocks/application-ui/appointments/imac-back-image.png"
-//             alt="iMac Back Image"
-//             className="h-full w-auto"
-//           />
-//         </div>
-//         <div className="relative p-2 bg-gray-100 rounded-lg sm:w-full h-32 sm:h-36 dark:bg-gray-700 flex items-center justify-center">
-//           <img
-//             src="https://flowbite.s3.amazonaws.com/blocks/application-ui/appointments/imac-back-image.png"
-//             alt="iMac Back Image"
-//             className="h-full w-auto"
-//           />
-//         </div>
-//       </div>
-//       <div>
-//         <h6 className="mb-2 text-base leading-none font-medium text-gray-900 dark:text-white">
-//           Details
-//         </h6>
-//         <div className="text-base text-gray-500 dark:text-gray-400 max-w-screen-md">
-//           Standard glass, 3.8GHz 8-core 10th-generation Intel Core
-//           i7 processor, Turbo Boost up to 5.0GHz, 16GB 2666MHz
-//           DDR4 memory, Radeon Pro 5500 XT with 8GB of GDDR6
-//           memory, 256GB SSD storage, Gigabit Ethernet, Magic Mouse
-//           2, Magic Keyboard - US.
-//         </div>
-//       </div>
-//       <div className="grid grid-cols-4 gap-4 mt-4">
-//         <div className="relative p-3 bg-gray-100 rounded-lg dark:bg-gray-700 flex flex-col items-start justify-between">
-//           <h6 className="mb-2 text-base leading-none font-medium text-gray-900 dark:text-white">
-//             Appointment State
-//           </h6>
-//           <div className="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-md dark:bg-blue-200 dark:text-blue-800 flex items-center">
-//             <svg
-//               xmlns="http://www.w3.org/2000/svg"
-//               className="h-3.5 w-3.5 mr-1"
-//               fill="currentColor"
-//               aria-hidden="true"
-//             >
-//               <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-//             </svg>
-//             New
-//           </div>
-//         </div>
-//         <div className="relative p-3 bg-gray-100 rounded-lg dark:bg-gray-700 flex flex-col justify-between">
-//           <h6 className="mb-2 text-base leading-none font-medium text-gray-900 dark:text-white">
-//             Shipping
-//           </h6>
-//           <div className="flex items-center text-gray-500 dark:text-gray-400">
-//             <svg
-//               xmlns="http://www.w3.org/2000/svg"
-//               className="h-3.5 w-3.5 mr-1"
-//               fill="currentColor"
-//               aria-hidden="true"
-//             >
-//               <path
-//                 fill-rule="evenodd"
-//                 d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
-//                 clip-rule="evenodd"
-//               />
-//             </svg>
-//             Worldwide
-//           </div>
-//         </div>
-//         <div className="relative p-3 bg-gray-100 rounded-lg dark:bg-gray-700">
-//           <h6 className="mb-2 text-base leading-none font-medium text-gray-900 dark:text-white">
-//             Colors
-//           </h6>
-//           <div className="flex items-center space-x-2">
-//             <div className="rounded-full h-6 w-6 bg-purple-600"></div>
-//             <div className="rounded-full h-6 w-6 bg-indigo-400"></div>
-//             <div className="rounded-full h-6 w-6 bg-blue-600"></div>
-//             <div className="rounded-full h-6 w-6 bg-pink-400"></div>
-//             <div className="rounded-full h-6 w-6 bg-teal-300"></div>
-//             <div className="rounded-full h-6 w-6 bg-green-300"></div>
-//           </div>
-//         </div>
-//         <div className="relative p-3 bg-gray-100 rounded-lg dark:bg-gray-700">
-//           <h6 className="mb-2 text-base leading-none font-medium text-gray-900 dark:text-white">
-//             Brand
-//           </h6>
-//           <div className="flex items-center text-gray-500 dark:text-gray-400">
-//             Apple
-//           </div>
-//         </div>
-//         <div className="relative p-3 bg-gray-100 rounded-lg dark:bg-gray-700">
-//           <h6 className="mb-2 text-base leading-none font-medium text-gray-900 dark:text-white">
-//             Sold by
-//           </h6>
-//           <div className="flex items-center text-gray-500 dark:text-gray-400">
-//             Flowbite
-//           </div>
-//         </div>
-//         <div className="relative p-3 bg-gray-100 rounded-lg dark:bg-gray-700">
-//           <h6 className="mb-2 text-base leading-none font-medium text-gray-900 dark:text-white">
-//             Ships from
-//           </h6>
-//           <div className="flex items-center text-gray-500 dark:text-gray-400">
-//             Flowbite
-//           </div>
-//         </div>
-//         <div className="relative p-3 bg-gray-100 rounded-lg dark:bg-gray-700">
-//           <h6 className="mb-2 text-base leading-none font-medium text-gray-900 dark:text-white">
-//             Dimensions (cm)
-//           </h6>
-//           <div className="flex items-center text-gray-500 dark:text-gray-400">
-//             105 x 15 x 23
-//           </div>
-//         </div>
-//         <div className="relative p-3 bg-gray-100 rounded-lg dark:bg-gray-700">
-//           <h6 className="mb-2 text-base leading-none font-medium text-gray-900 dark:text-white">
-//             Item weight
-//           </h6>
-//           <div className="flex items-center text-gray-500 dark:text-gray-400">
-//             12kg
-//           </div>
-//         </div>
-//       </div>
-//       <div className="flex items-center space-x-3 mt-4">
-//         <button
-//           type="button"
-//           className="py-2 px-3 flex items-center text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-//         >
-//           <svg
-//             xmlns="http://www.w3.org/2000/svg"
-//             className="h-4 w-4 mr-1"
-//             fill="currentColor"
-//             aria-hidden="true"
-//           >
-//             <path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z" />
-//             <path
-//               fill-rule="evenodd"
-//               d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z"
-//               clip-rule="evenodd"
-//             />
-//           </svg>
-//           Edit
-//         </button>
-//         <button
-//           type="button"
-//           className="py-2 px-3 flex items-center text-sm font-medium text-center text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
-//         >
-//           Preview
-//         </button>
-//         <button
-//           type="button"
-//           className="py-2 px-3 flex items-center text-sm font-medium text-center text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 rounded-lg dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900"
-//         >
-//           <svg
-//             xmlns="http://www.w3.org/2000/svg"
-//             className="h-4 w-4 mr-1"
-//             fill="currentColor"
-//             aria-hidden="true"
-//           >
-//             <path
-//               fill-rule="evenodd"
-//               d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z"
-//               clip-rule="evenodd"
-//             />
-//           </svg>
-//           Delete
-//         </button>
-//       </div>
-//     </td>
-//   </tr>)
-// }
+interface tableRowProps {
+  id: string;
+  createdAt: string;
+  location: string;
+  time: string;
+  docs: string[];
+  status: Status;
+}
+
+const Entry = ({
+  id,
+  createdAt,
+  location,
+  time,
+  docs,
+  status,
+}: tableRowProps) => {
+  return <></>;
+};
+
+function tableRow(props: tableRowProps) {
+  return (
+    <tr
+      className="hidden flex-1 overflow-x-auto w-full"
+      id="table-column-body-0"
+      aria-labelledby="table-column-header-0"
+    >
+      <td className="p-4 border-b dark:border-gray-700">
+        <div className="grid grid-cols-4 gap-4 mb-4">
+          <div className="relative p-2 bg-gray-100 rounded-lg sm:w-full h-32 sm:h-36 dark:bg-gray-700 flex items-center justify-center">
+            <img
+              src="https://flowbite.s3.amazonaws.com/blocks/application-ui/appointments/imac-front-image.png"
+              alt="iMac Front Image"
+              className="h-full w-auto"
+            />
+          </div>
+          <div className="relative p-2 bg-gray-100 rounded-lg sm:w-full h-32 sm:h-36 dark:bg-gray-700 flex items-center justify-center">
+            <img
+              src="https://flowbite.s3.amazonaws.com/blocks/application-ui/appointments/imac-side-image.png"
+              alt="iMac Side Image"
+              className="h-full w-auto"
+            />
+          </div>
+          <div className="relative p-2 bg-gray-100 rounded-lg sm:w-full h-32 sm:h-36 dark:bg-gray-700 flex items-center justify-center">
+            <img
+              src="https://flowbite.s3.amazonaws.com/blocks/application-ui/appointments/imac-back-image.png"
+              alt="iMac Back Image"
+              className="h-full w-auto"
+            />
+          </div>
+          <div className="relative p-2 bg-gray-100 rounded-lg sm:w-full h-32 sm:h-36 dark:bg-gray-700 flex items-center justify-center">
+            <img
+              src="https://flowbite.s3.amazonaws.com/blocks/application-ui/appointments/imac-back-image.png"
+              alt="iMac Back Image"
+              className="h-full w-auto"
+            />
+          </div>
+        </div>
+        <div>
+          <h6 className="mb-2 text-base leading-none font-medium text-gray-900 dark:text-white">
+            Details
+          </h6>
+          <div className="text-base text-gray-500 dark:text-gray-400 max-w-screen-md">
+            Standard glass, 3.8GHz 8-core 10th-generation Intel Core i7
+            processor, Turbo Boost up to 5.0GHz, 16GB 2666MHz DDR4 memory,
+            Radeon Pro 5500 XT with 8GB of GDDR6 memory, 256GB SSD storage,
+            Gigabit Ethernet, Magic Mouse 2, Magic Keyboard - US.
+          </div>
+        </div>
+        <div className="grid grid-cols-4 gap-4 mt-4">
+          <div className="relative p-3 bg-gray-100 rounded-lg dark:bg-gray-700 flex flex-col items-start justify-between">
+            <h6 className="mb-2 text-base leading-none font-medium text-gray-900 dark:text-white">
+              Appointment State
+            </h6>
+            <div className="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-md dark:bg-blue-200 dark:text-blue-800 flex items-center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-3.5 w-3.5 mr-1"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+              </svg>
+              New
+            </div>
+          </div>
+          <div className="relative p-3 bg-gray-100 rounded-lg dark:bg-gray-700 flex flex-col justify-between">
+            <h6 className="mb-2 text-base leading-none font-medium text-gray-900 dark:text-white">
+              Shipping
+            </h6>
+            <div className="flex items-center text-gray-500 dark:text-gray-400">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-3.5 w-3.5 mr-1"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              Worldwide
+            </div>
+          </div>
+          <div className="relative p-3 bg-gray-100 rounded-lg dark:bg-gray-700">
+            <h6 className="mb-2 text-base leading-none font-medium text-gray-900 dark:text-white">
+              Colors
+            </h6>
+            <div className="flex items-center space-x-2">
+              <div className="rounded-full h-6 w-6 bg-purple-600"></div>
+              <div className="rounded-full h-6 w-6 bg-indigo-400"></div>
+              <div className="rounded-full h-6 w-6 bg-blue-600"></div>
+              <div className="rounded-full h-6 w-6 bg-pink-400"></div>
+              <div className="rounded-full h-6 w-6 bg-teal-300"></div>
+              <div className="rounded-full h-6 w-6 bg-green-300"></div>
+            </div>
+          </div>
+          <div className="relative p-3 bg-gray-100 rounded-lg dark:bg-gray-700">
+            <h6 className="mb-2 text-base leading-none font-medium text-gray-900 dark:text-white">
+              Brand
+            </h6>
+            <div className="flex items-center text-gray-500 dark:text-gray-400">
+              Apple
+            </div>
+          </div>
+          <div className="relative p-3 bg-gray-100 rounded-lg dark:bg-gray-700">
+            <h6 className="mb-2 text-base leading-none font-medium text-gray-900 dark:text-white">
+              Sold by
+            </h6>
+            <div className="flex items-center text-gray-500 dark:text-gray-400">
+              Flowbite
+            </div>
+          </div>
+          <div className="relative p-3 bg-gray-100 rounded-lg dark:bg-gray-700">
+            <h6 className="mb-2 text-base leading-none font-medium text-gray-900 dark:text-white">
+              Ships from
+            </h6>
+            <div className="flex items-center text-gray-500 dark:text-gray-400">
+              Flowbite
+            </div>
+          </div>
+          <div className="relative p-3 bg-gray-100 rounded-lg dark:bg-gray-700">
+            <h6 className="mb-2 text-base leading-none font-medium text-gray-900 dark:text-white">
+              Dimensions (cm)
+            </h6>
+            <div className="flex items-center text-gray-500 dark:text-gray-400">
+              105 x 15 x 23
+            </div>
+          </div>
+          <div className="relative p-3 bg-gray-100 rounded-lg dark:bg-gray-700">
+            <h6 className="mb-2 text-base leading-none font-medium text-gray-900 dark:text-white">
+              Item weight
+            </h6>
+            <div className="flex items-center text-gray-500 dark:text-gray-400">
+              12kg
+            </div>
+          </div>
+        </div>
+        <div className="flex items-center space-x-3 mt-4">
+          <button
+            type="button"
+            className="py-2 px-3 flex items-center text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-4 w-4 mr-1"
+              fill="currentColor"
+              aria-hidden="true"
+            >
+              <path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z" />
+              <path
+                fill-rule="evenodd"
+                d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z"
+                clip-rule="evenodd"
+              />
+            </svg>
+            Edit
+          </button>
+          <button
+            type="button"
+            className="py-2 px-3 flex items-center text-sm font-medium text-center text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+          >
+            Preview
+          </button>
+          <button
+            type="button"
+            className="py-2 px-3 flex items-center text-sm font-medium text-center text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 rounded-lg dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-4 w-4 mr-1"
+              fill="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z"
+                clip-rule="evenodd"
+              />
+            </svg>
+            Delete
+          </button>
+        </div>
+      </td>
+    </tr>
+  );
+}
 
 export default function Home() {
   return (
@@ -314,7 +339,7 @@ export default function Home() {
                       id="default-search "
                       className="block w-full p-2 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                       placeholder="Search..."
-                      required={true}
+                      required={false}
                     />
                     <button
                       type="submit"
@@ -577,72 +602,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          {/* <div className="flex flex-col md:flex-row items-center justify-between space-y-3 md:space-y-0 md:space-x-4 p-4 border-b dark:border-gray-700">
-            <div className="w-full flex items-center space-x-3">
-              <h5 className="dark:text-white font-semibold">
-                Flowbite Appointments
-              </h5>
-              <div className="text-gray-400 font-medium">6,560 results</div>
-              <div data-tooltip-target="results-tooltip">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-4 w-4 text-gray-400"
-                  fill="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-                <span className="sr-only">More info</span>
-              </div>
-              <div
-                id="results-tooltip"
-                role="tooltip"
-                className="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700"
-              >
-                Showing 1-10 of 6,560 results
-                <div className="tooltip-arrow" data-popper-arrow=""></div>
-              </div>
-            </div>
-            <div className="w-full flex flex-row items-center justify-end space-x-3">
-              <button
-                type="button"
-                className="w-full md:w-auto flex items-center justify-center text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
-              >
-                <svg
-                  className="h-3.5 w-3.5 mr-2"
-                  fill="currentColor"
-                  xmlns="http://www.w3.org/2000/svg"
-                  aria-hidden="true"
-                >
-                  <path
-                    clip-rule="evenodd"
-                    fill-rule="evenodd"
-                    d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z"
-                  />
-                </svg>
-                Add new appointment
-              </button>
-              <button
-                type="button"
-                className="w-full md:w-auto flex items-center justify-center py-2 px-3 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
-              >
-                <svg
-                  className="mr-2 w-3 h-3"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor"
-                  stroke="currentColor"
-                  aria-hidden="true"
-                >
-                  <path d="M1 2V1h10v3H1V2Zm0 4h5v6H1V6Zm8 0h2v6H9V6Z" />
-                </svg>
-                Manage Columns
-              </button>
-            </div>
-          </div> */}
+
           <div className="flex flex-col-reverse md:flex-row items-start md:items-center justify-between md:space-x-4 p-4 border-b dark:border-gray-700">
             <div className="mt-3 md:mt-0">
               <button
@@ -692,69 +652,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            {/* TODO  GOTTA GO THROUGH WHOLE FILE AND DELETE UNUSED ELEMENTS*/}
-            {/* <div className="grid grid-cols-1 md:grid-cols-4 w-full lg:w-2/3 md:gap-4">
-              <div className="w-full">
-                <label htmlFor="brand" className="sr-only">
-                  Brand
-                </label>
-                <select
-                  id="brand"
-                  className="block py-2.5 px-0 w-full text-sm text-gray-500 bg-transparent border-0 border-b-2 border-gray-200 appearance-none dark:text-gray-400 dark:border-gray-700 focus:outline-none focus:ring-0 focus:border-gray-200 peer"
-                >
-                  <option value="">Brand</option>
-                  <option value="purple">Samsung</option>
-                  <option value="blue">Apple</option>
-                  <option value="pink">Pink</option>
-                  <option value="green">Green</option>
-                </select>
-              </div>
-              <div className="w-full">
-                <label htmlFor="price" className="sr-only">
-                  Price
-                </label>
-                <select
-                  id="price"
-                  className="block py-2.5 px-0 w-full text-sm text-gray-500 bg-transparent border-0 border-b-2 border-gray-200 appearance-none dark:text-gray-400 dark:border-gray-700 focus:outline-none focus:ring-0 focus:border-gray-200 peer"
-                >
-                  <option value="">Price</option>
-                  <option value="below-100">$ 1-100</option>
-                  <option value="below-500">$ 101-500</option>
-                  <option value="below-1000">$ 501-1000</option>
-                  <option value="over-1000">$ 1001+</option>
-                </select>
-              </div>
-              <div className="w-full">
-                <label htmlFor="category" className="sr-only">
-                  Category
-                </label>
-                <select
-                  id="category"
-                  className="block py-2.5 px-0 w-full text-sm text-gray-500 bg-transparent border-0 border-b-2 border-gray-200 appearance-none dark:text-gray-400 dark:border-gray-700 focus:outline-none focus:ring-0 focus:border-gray-200 peer"
-                >
-                  <option value="">Category</option>
-                  <option value="pc">PC</option>
-                  <option value="phone">Phone</option>
-                  <option value="tablet">Tablet</option>
-                  <option value="console">Gaming/Console</option>
-                </select>
-              </div>
-              <div className="w-full">
-                <label htmlFor="color" className="sr-only">
-                  Color
-                </label>
-                <select
-                  id="color"
-                  className="block py-2.5 px-0 w-full text-sm text-gray-500 bg-transparent border-0 border-b-2 border-gray-200 appearance-none dark:text-gray-400 dark:border-gray-700 focus:outline-none focus:ring-0 focus:border-gray-200 peer"
-                >
-                  <option value="">Color</option>
-                  <option value="purple">Purple</option>
-                  <option value="blue">blue</option>
-                  <option value="pink">Pink</option>
-                  <option value="green">Green</option>
-                </select>
-              </div>
-            </div> */}
+            {/* TODO NEXT SECTION */}
           </div>
           <div className="overflow-x-auto">
             <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
@@ -1880,45 +1778,7 @@ export default function Home() {
               </tbody>
             </table>
           </div>
-          {/* <div
-            className="flex flex-col md:flex-row justify-between items-start md:items-center space-y-3 md:space-y-0 px-4 pt-3 pb-4"
-            aria-label="Table navigation"
-          >
-            <div className="text-xs flex items-center space-x-5">
-              <div>
-                <div className="text-gray-500 dark:text-gray-400 mb-1">
-                  Purchase price
-                </div>
-                <div className="dark:text-white font-medium">$ 3,567,890</div>
-              </div>
-              <div>
-                <div className="text-gray-500 dark:text-gray-400 mb-1">
-                  Total selling price
-                </div>
-                <div className="dark:text-white font-medium">$ 8,489,400</div>
-              </div>
-            </div>
-            <div className="flex items-center space-x-4">
-              <button
-                type="button"
-                className="py-1.5 flex items-center text-sm font-medium text-center text-blue-700 rounded-lg hover:text-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:text-blue-500 dark:hover:text-blue-600 dark:focus:ring-blue-800"
-              >
-                Print barcodes
-              </button>
-              <button
-                type="button"
-                className="py-1.5 flex items-center text-sm font-medium text-center text-blue-700 rounded-lg hover:text-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:text-blue-500 dark:hover:text-blue-600 dark:focus:ring-blue-800"
-              >
-                Duplicate
-              </button>
-              <button
-                type="button"
-                className="py-2 px-3 flex items-center text-xs font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-              >
-                Export CSV
-              </button>
-            </div>
-          </div> */}
+
           <div className="relative overflow-hidden bg-white rounded-b-lg shadow-md dark:bg-gray-800">
             <nav
               className="flex flex-col items-start justify-between p-4 space-y-3 md:flex-row md:items-center md:space-y-0"
