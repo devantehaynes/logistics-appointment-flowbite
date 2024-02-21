@@ -28,9 +28,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Header />
-          <main className="CONTAINER pt-10 pb-40 min-h-screen">
-            {children}
-          </main>{" "}
+          <main className="CONTAINER min-h-screen">{children}</main>
           <Toaster />
           <Footer />
         </ThemeProvider>
