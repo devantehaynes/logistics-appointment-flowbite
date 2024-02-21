@@ -6,13 +6,14 @@
 //   completed = "completed",
 // }
 
-import NestedTableRow from "./components/nested-table-row";
-import TableActions from "./components/table-actions";
-import TableFooter from "./components/table-footer";
-import TableHead from "./components/table-head";
-import TableHeader from "./components/table-header";
-import TableRow from "./components/table-row";
-import TableRowMain from "./components/table-row-main";
+import NestedRow from "./tableComponents/nested-row/nested-row";
+import NestedTableRow from "./tableComponents/nested-row/nested-row";
+import TableActions from "./tableComponents/table-actions";
+import TableFooter from "./tableComponents/table-footer";
+import TableHead from "./tableComponents/table-head";
+import TableHeader from "./tableComponents/table-header";
+import TableRow from "./tableComponents/table-row";
+import TableRowMain from "./tableComponents/table-row-main";
 
 // interface tableRowProps {
 //   id: string;
@@ -56,7 +57,7 @@ export default function Table() {
                 <TableRowMain />
                 <TableRowMain />
                 <TableRowMain />
-                <NestedTableRow />
+                <NestedRow />
                 {/* <TableRow /> */}
               </tbody>
             </table>

@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "./components/header";
 import Footer from "./components/footer";
 import { ThemeProvider } from "./components/theme-provider";
+import { Toaster } from "@/components/ui/toaster";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -27,7 +28,10 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Header />
-          <main className="CONTAINER pt-10 pb-40 min-h-screen">{children}</main>
+          <main className="CONTAINER pt-10 pb-40 min-h-screen">
+            {children}
+          </main>{" "}
+          <Toaster />
           <Footer />
         </ThemeProvider>
       </body>

@@ -1,4 +1,9 @@
-export default function NestedTableRow() {
+import DeleteButton from "@/app/components/appointments/tableComponents/nested-row/delete-button";
+import { PenLine, PencilLine, Trash2Icon, TrashIcon } from "lucide-react";
+import EditButton from "./edit-button";
+import Info from "./info";
+
+export default function NestedRow() {
   {
     /* TODO BOTTOM SECTION NESTED COLUMNS, SETSTATE PART const [expanded, setExpanded] = setState(false);
   function rowHandler() {
@@ -12,8 +17,9 @@ export default function NestedTableRow() {
       aria-labelledby="table-column-header-10"
     >
       <td className="p-4 border-b dark:border-gray-700" colSpan={10}>
+        {/* TODO START CODING HERE*/}
         {/* TODO FOUR PHOTO GRID  */}
-        <div className="grid grid-cols-4 gap-4 mb-4">
+        {/* <div className="grid grid-cols-4 gap-4 mb-4">
           <div className="relative p-2 bg-gray-100 rounded-lg sm:w-full h-32 sm:h-36 dark:bg-gray-700 flex items-center justify-center">
             <img
               src="https://flowbite.s3.amazonaws.com/blocks/application-ui/products/imac-front-image.png"
@@ -42,9 +48,9 @@ export default function NestedTableRow() {
               className="h-full w-auto"
             />
           </div>
-        </div>
+        </div> */}
         {/* TODO DETAILS SECTION  */}
-        <div>
+        {/* <div>
           <h6 className="mb-2 text-base leading-none font-medium text-gray-900 dark:text-white">
             Details
           </h6>
@@ -54,10 +60,10 @@ export default function NestedTableRow() {
             Radeon Pro 5500 XT with 8GB of GDDR6 memory, 256GB SSD storage,
             Gigabit Ethernet, Magic Mouse 2, Magic Keyboard - US.
           </div>
-        </div>
+        </div> */}
 
         {/* TODO BOTTOM TABS-- PRODUCT STATE, SHIPPING, COLORS ... */}
-        <div className="grid grid-cols-4 gap-4 mt-4">
+        {/* <div className="grid grid-cols-4 gap-4 mt-4">
           <div className="relative p-3 bg-gray-100 rounded-lg dark:bg-gray-700 flex flex-col items-start justify-between">
             <h6 className="mb-2 text-base leading-none font-medium text-gray-900 dark:text-white">
               Product State
@@ -149,29 +155,62 @@ export default function NestedTableRow() {
               12kg
             </div>
           </div>
-        </div>
-        {/* TODO EDIT/PREVIEW/DELETE BUTTON SECTION */}
-        <div className="flex items-center space-x-3 mt-4">
+        </div> */}
+        {/* TODO END OF PRECODED SECTION */}
+        {/* TODO BEGINNING OF NEW SECTION */}
+        <Info />
+        {/* TODO EDIT/PREVIEW/DELETE BUTTON SECTION --- FOOTER --justify between ex added below*/}
+        {/* <div className="flex items-center justify-between">
+        <div className="flex items-center space-x-3 sm:space-x-4">
           <button
             type="button"
-            className="py-2 px-3 flex items-center text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            className="text-white inline-flex items-center bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
           >
             <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-4 w-4 mr-1"
-              viewBox="0 0 20 20"
-              fill="currentColor"
               aria-hidden="true"
+              className="w-5 h-5 mr-1 -ml-1"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              <path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z" />
+              <path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z"></path>
               <path
                 fillRule="evenodd"
                 d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z"
                 clipRule="evenodd"
-              />
+              ></path>
             </svg>
             Edit
           </button>
+          <button
+            type="button"
+            className="py-2.5 px-5 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+          >
+            Preview
+          </button>
+        </div>
+        <button
+          type="button"
+          className="inline-flex items-center text-white bg-red-600 hover:bg-red-700 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-red-500 dark:hover:bg-red-600 dark:focus:ring-red-900"
+        >
+          <svg
+            aria-hidden="true"
+            className="w-5 h-5 mr-1.5 -ml-1"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fillRule="evenodd"
+              d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z"
+              clipRule="evenodd"
+            ></path>
+          </svg>
+          Delete
+        </button>
+      </div> */}
+        <div className="flex items-center space-x-3 mt-4">
+          <EditButton />
           {/* <button
             type="button"
             className="py-2 px-3 flex items-center text-sm font-medium text-center text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
@@ -193,25 +232,7 @@ export default function NestedTableRow() {
             </svg>
             Preview
           </button> */}
-          <button
-            type="button"
-            className="py-2 px-3 flex items-center text-sm font-medium text-center text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 rounded-lg dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-4 w-4 mr-1"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-              aria-hidden="true"
-            >
-              <path
-                fillRule="evenodd"
-                d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z"
-                clipRule="evenodd"
-              />
-            </svg>
-            Delete
-          </button>
+          <DeleteButton />
         </div>
       </td>
     </tr>
