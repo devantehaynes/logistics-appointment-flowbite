@@ -41,7 +41,7 @@ import TableRowMain from "./tableComponents/table-row-main";
 
 export default function Table() {
   return (
-    <section className="bg-gray-50 dark:bg-gray-900 py-3 sm:py-5 h-screen">
+    <section className="bg-gray-50 dark:bg-gray-900 py-3 sm:py-5 min-h-screen">
       <div className="mx-auto max-w-screen-2xl px-4 lg:px-12">
         {/* <!-- Start coding here --> */}
         <div className="bg-white dark:bg-gray-800 relative shadow-md sm:rounded-lg overflow-hidden">

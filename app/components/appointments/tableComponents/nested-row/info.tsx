@@ -71,7 +71,8 @@ export default function Info() {
 
           {/* TODO END OF NEW SECTION */}
         </dl>
-        <dl>
+        {/* TODO RIGHT SIDE BEGINS */}
+        {/* <dl>
           <dt className="mb-2 font-semibold leading-none text-gray-900 dark:text-white">
             Details
           </dt>
@@ -80,7 +81,55 @@ export default function Info() {
             Conference Organized by Flowbite and Themesberg, Live on Saturday
             26th Nov at 02:00 pm GMT | 04:00 pm EET on Zoom Webinars
           </dd>
-        </dl>
+        </dl> */}
+        {/* TODO CHANGE BORDER TO NECESSARY GRAY AND PADDING */}
+        <div>
+          <div className="h-14 bg-gray-700 rounded-lg border-gray-200 p-4">
+            <div className=" flex items-center justify-around"><p>MAWB</p>
+              <p>HAWB</p>
+              <p>PCS</p>
+              <p>WEIGHT(KG)</p></div>
+          </div>
+          {/* TODO NEW TAB SECTION BEGIN */}
+          <div className="grid grid-cols-4 gap-4 mt-4">
+
+
+
+            <div className="relative p-3 bg-gray-100 rounded-lg dark:bg-gray-700 items-center justify-center">
+              <h6 className="mb-2 text-base leading-none font-medium text-gray-900 dark:text-white">
+                Total Mawbs
+              </h6>
+              <div className="flex items-center text-gray-500 dark:text-gray-400">
+                2
+              </div>
+            </div>
+            <div className="relative p-3 bg-gray-100 rounded-lg dark:bg-gray-700 items-center justify-center">
+              <h6 className="mb-2 text-base leading-none font-medium text-gray-900 dark:text-white">
+                Total Hawbs
+              </h6>
+              <div className="flex items-center text-gray-500 dark:text-gray-400">
+                3
+              </div>
+            </div>
+            <div className="relative p-3 bg-gray-100 rounded-lg dark:bg-gray-700 items-center justify-center">
+              <h6 className="mb-2 text-base leading-none font-medium text-gray-900 dark:text-white">
+                Total Pcs
+              </h6>
+              <div className="flex items-center text-gray-500 dark:text-gray-400">
+                231
+              </div>
+            </div>
+            <div className="relative p-3 bg-gray-100 rounded-lg dark:bg-gray-700 items-center justify-center">
+              <h6 className="mb-2 text-base leading-none font-medium text-gray-900 dark:text-white">
+                Total Weight (kg)
+              </h6>
+              <div className="flex items-center text-gray-500 dark:text-gray-400">
+                12kg
+              </div>
+            </div>
+          </div>
+          {/* TODO NEW TAB SECTION END */}
+        </div>
       </div>
     </div>
   );
