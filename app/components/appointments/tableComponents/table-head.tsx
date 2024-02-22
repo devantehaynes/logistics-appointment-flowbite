@@ -24,43 +24,25 @@ export default function TableHead() {
         </th>
         <th scope="col" className="px-4 py-3 min-w-[10rem]">
           Created at
-
           <ArrowUpDownIcon className="h-4 w-4 ml-1 inline-block" />
         </th>
         <th scope="col" className="px-4 py-3 min-w-[6rem]">
           Location
-
-
           <ArrowUpDownIcon className="h-4 w-4 ml-1 inline-block" />
         </th>
         <th scope="col" className="px-4 py-3 min-w-[6rem]">
           Time
-
           <ArrowUpDownIcon className="h-4 w-4 ml-1 inline-block" />
         </th>
         <th scope="col" className="px-4 py-3 min-w-[6rem]">
           Type
-
           <ArrowUpDownIcon className="h-4 w-4 ml-1 inline-block" />
         </th>
         <th scope="col" className="px-4 py-3 min-w-[12rem]">
           Docs
-          {/* <svg
-        className="h-4 w-4 ml-1 inline-block"
-        fill="currentColor"
-        xmlns="http://www.w3.org/2000/svg"
-        aria-hidden="true"
-      >
-        <path
-          clipRule="evenodd"
-          fillRule="evenodd"
-          d="M10 3a.75.75 0 01.55.24l3.25 3.5a.75.75 0 11-1.1 1.02L10 4.852 7.3 7.76a.75.75 0 01-1.1-1.02l3.25-3.5A.75.75 0 0110 3zm-3.76 9.2a.75.75 0 011.06.04l2.7 2.908 2.7-2.908a.75.75 0 111.1 1.02l-3.25 3.5a.75.75 0 01-1.1 0l-3.25-3.5a.75.75 0 01.04-1.06z"
-        />
-      </svg> */}
         </th>
         <th scope="col" className="px-4 py-3 min-w-[7rem]">
           Status
-
           <ArrowUpDownIcon className="h-4 w-4 ml-1 inline-block" />
         </th>
         {/* TODO ADD ACTIONS COL TO HEAD? */}

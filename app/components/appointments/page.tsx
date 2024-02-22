@@ -6,8 +6,8 @@
 //   completed = "completed",
 // }
 
-import NestedRow from "./tableComponents/nested-row/nested-row";
-import NestedTableRow from "./tableComponents/nested-row/nested-row";
+import NestedRow from "./tableComponents/nested-row/page";
+import NestedTableRow from "./tableComponents/nested-row/page";
 import TableActions from "./tableComponents/table-actions";
 import TableFooter from "./tableComponents/table-footer";
 import TableHead from "./tableComponents/table-head";

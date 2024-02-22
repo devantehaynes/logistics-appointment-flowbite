@@ -1,12 +1,15 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Calendar, CalendarIcon, MapPin, MapPinIcon } from "lucide-react";
+import NestedTableHead from "./table-components/nested-table-head";
+import SummaryTabs from "./table-components/summary-tabs";
+import NestedRowTableRow from "./table-components/nested-row-table-row";
+import DetailCard from "./detail-card";
 
 export default function Info() {
   return (
     <div className="relative p-4 bg-white rounded-lg shadow dark:bg-gray-800 sm:p-5">
       <div className="grid gap-4 mb-4 sm:grid-cols-2 sm:gap-6 sm:mb-5">
-        <dl className="p-4 border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-700 dark:border-gray-600">
-          {/* TODO ADD STYLING TO SPACE OUT AVA */}
+        {/* <dl className="p-4 border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-700 dark:border-gray-600">
           <div className=" mb-4 rounded-t sm:mb-5">
             <div className="flex items-center">
               <img
@@ -25,24 +28,15 @@ export default function Info() {
             </div>
           </div>
           <dt className="sr-only">Date</dt>
-          {/* <dd className="flex items-center mb-2 font-light text-gray-500 dark:text-gray-400"> */}
           <dd className="flex items-center mb-4 font-light text-gray-500 dark:text-gray-400 sm:mb-5">
             <CalendarIcon className="w-4 h-4 mr-1.5 text-gray-400 dark:text-gray-500" />
             <span className="font-medium text-gray-900 dark:text-white">
               26th March, 2024 @ 16:00
             </span>
           </dd>
-          {/* <dt className="sr-only">Location</dt>
-          <dd className="flex items-center mb-4 font-light text-gray-500 dark:text-gray-400 sm:mb-5">
-            <MapPinIcon className="w-4 h-4 mr-1.5 text-gray-400 dark:text-gray-500" />
-            <span className="font-medium text-gray-900 dark:text-white">
-              California, USA
-            </span>
-          </dd> */}
-
-          {/* TODO NEW SECTION */}
+        
           <dt className="mb-2 leading-none text-gray-500 dark:text-gray-400">
-            Home Adress
+            Adress
           </dt>
           <dd className="mb-4 font-medium text-gray-900 sm:mb-5 dark:text-white">
             1 World Way, Los Angeles, CA 90045-5803, United States of America
@@ -69,66 +63,14 @@ export default function Info() {
             +1234 567 890 / +12 345 678{" "}
           </dd>
 
-          {/* TODO END OF NEW SECTION */}
-        </dl>
-        {/* TODO RIGHT SIDE BEGINS */}
-        {/* <dl>
-          <dt className="mb-2 font-semibold leading-none text-gray-900 dark:text-white">
-            Details
-          </dt>
-          <dd className="font-light text-gray-500 dark:text-gray-400">
-            The 4th Digital Transformation and Industry 4.0 Free Online
-            Conference Organized by Flowbite and Themesberg, Live on Saturday
-            26th Nov at 02:00 pm GMT | 04:00 pm EET on Zoom Webinars
-          </dd>
         </dl> */}
-        {/* TODO CHANGE BORDER TO NECESSARY GRAY AND PADDING */}
-        <div>
-          <div className="h-14 bg-gray-700 rounded-lg border-gray-200 p-4">
-            <div className=" flex items-center justify-around"><p>MAWB</p>
-              <p>HAWB</p>
-              <p>PCS</p>
-              <p>WEIGHT(KG)</p></div>
+        <DetailCard />
+        <div className="flex flex-col space-y-6 justify-between">
+          <div className="flex flex-col ">
+            <NestedTableHead />
+            <NestedRowTableRow />
           </div>
-          {/* TODO NEW TAB SECTION BEGIN */}
-          <div className="grid grid-cols-4 gap-4 mt-4">
-
-
-
-            <div className="relative p-3 bg-gray-100 rounded-lg dark:bg-gray-700 items-center justify-center">
-              <h6 className="mb-2 text-base leading-none font-medium text-gray-900 dark:text-white">
-                Total Mawbs
-              </h6>
-              <div className="flex items-center text-gray-500 dark:text-gray-400">
-                2
-              </div>
-            </div>
-            <div className="relative p-3 bg-gray-100 rounded-lg dark:bg-gray-700 items-center justify-center">
-              <h6 className="mb-2 text-base leading-none font-medium text-gray-900 dark:text-white">
-                Total Hawbs
-              </h6>
-              <div className="flex items-center text-gray-500 dark:text-gray-400">
-                3
-              </div>
-            </div>
-            <div className="relative p-3 bg-gray-100 rounded-lg dark:bg-gray-700 items-center justify-center">
-              <h6 className="mb-2 text-base leading-none font-medium text-gray-900 dark:text-white">
-                Total Pcs
-              </h6>
-              <div className="flex items-center text-gray-500 dark:text-gray-400">
-                231
-              </div>
-            </div>
-            <div className="relative p-3 bg-gray-100 rounded-lg dark:bg-gray-700 items-center justify-center">
-              <h6 className="mb-2 text-base leading-none font-medium text-gray-900 dark:text-white">
-                Total Weight (kg)
-              </h6>
-              <div className="flex items-center text-gray-500 dark:text-gray-400">
-                12kg
-              </div>
-            </div>
-          </div>
-          {/* TODO NEW TAB SECTION END */}
+          <SummaryTabs />
         </div>
       </div>
     </div>
