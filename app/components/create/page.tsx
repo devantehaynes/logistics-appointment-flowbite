@@ -372,7 +372,7 @@ export default function CreateAppointmentPage() {
     //   </div>
     // </div>
 
-    <section className="bg-white dark:bg-black">
+    <section className="">
       <AlertDialog>
         <AlertDialogTrigger asChild>
           <Button className=" px-4 py-2 text-sm font-medium text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
