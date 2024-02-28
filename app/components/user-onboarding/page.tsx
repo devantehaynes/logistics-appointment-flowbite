@@ -8,14 +8,14 @@ export default function UserOnboarding() {
       <div className="lg:flex">
         <div className="hidden w-full max-w-md p-12 lg:h-screen lg:block bg-blue-600">
           <div className="flex items-center mb-8 space-x-4">
-            <a
+            <Link
               href="#"
               className="flex items-center text-2xl font-semibold text-white"
             >
               <img className="w-8 h-8 mr-2" src={LOGO} />
               {APP_NAME}
-            </a>
-            <a
+            </Link>
+            <Link
               href="#"
               className="inline-flex items-center text-sm font-medium text-blue-100 hover:text-white"
             >
@@ -32,7 +32,7 @@ export default function UserOnboarding() {
                 ></path>
               </svg>
               Go back
-            </a>
+            </Link>
           </div>
           <div className="block p-8 text-white rounded-lg bg-blue-500">
             <h2 className="mb-1 text-2xl font-semibold">Your selected plan</h2>
@@ -134,13 +134,13 @@ export default function UserOnboarding() {
         <div className="flex items-center mx-auto md:w-[42rem] px-4 md:px-8 xl:px-0">
           <div className="w-full">
             <div className="flex items-center justify-center mb-8 space-x-4 lg:hidden">
-              <a href="#" className="flex items-center text-2xl font-semibold">
+              <Link href="#" className="flex items-center text-2xl font-semibold">
                 <img
                   className="w-8 h-8 mr-2"
                   src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/logo.svg"
                 />
                 <span className="text-gray-900 dark:text-white">Flowbite</span>
-              </a>
+              </Link>
             </div>
             <ol className="flex items-center mb-6 text-sm font-medium text-center text-gray-500 dark:text-gray-400 lg:mb-12 sm:text-base">
               <li className="flex items-center after:content-[''] after:w-12 after:h-1 after:border-b after:border-gray-200 after:border-1 after:hidden sm:after:inline-block after:mx-6 xl:after:mx-10 dark:after:border-gray-700">
@@ -228,19 +228,19 @@ export default function UserOnboarding() {
                 </label>
               </li>
             </ul>
-            <Link href="/user-onboarding/account-details">
+            <Link href="/components/user-onboarding/account-details">
               <button className="w-full px-5 py-2.5 sm:py-3.5 text-sm font-medium text-center text-white rounded-lg bg-blue-600 hover:bg-blue-700  focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 ">
                 Next: Account Info
               </button>
             </Link>
             <p className="mt-4 text-sm font-light text-gray-500 dark:text-gray-400">
               Already have an account?{" "}
-              <a
+              <Link
                 href="#"
                 className="font-medium text-blue-600 hover:underline dark:text-blue-500"
               >
                 Login here
-              </a>
+              </Link>
               .
             </p>
           </div>

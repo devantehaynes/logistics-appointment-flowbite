@@ -472,29 +472,29 @@ export default function Home() {
                         aria-labelledby="configurationDropdownButton"
                       >
                         <li>
-                          <a
+                          <Link
                             href="#"
                             className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                           >
                             By Category
-                          </a>
+                          </Link>
                         </li>
                         <li>
-                          <a
+                          <Link
                             href="#"
                             className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                           >
                             By Brand
-                          </a>
+                          </Link>
                         </li>
                       </ul>
                       <div className="py-1">
-                        <a
+                        <Link
                           href="#"
                           className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
                         >
                           Reset
-                        </a>
+                        </Link>
                       </div>
                     </div>
                   </div>
@@ -505,13 +505,13 @@ export default function Home() {
                   type="button"
                   className=" px-4 py-2 text-sm font-medium text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
                 >
-                  <a
+                  <Link
                     href="/components/create"
                     className="flex items-center justify-center"
                   >
                     <PlusIcon className="mr-2" />
                     Create appointment
-                  </a>
+                  </Link>
                 </button> */}
                 <CreateAppointmentPage />
               </div>
@@ -634,21 +634,21 @@ export default function Home() {
                   aria-labelledby="actionsDropdownButton"
                 >
                   <li>
-                    <a
+                    <Link
                       href="#"
                       className="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                     >
                       Mass Edit
-                    </a>
+                    </Link>
                   </li>
                 </ul>
                 <div className="py-1">
-                  <a
+                  <Link
                     href="#"
                     className="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
                   >
                     Delete all
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -1796,7 +1796,7 @@ export default function Home() {
               </span>
               <ul className="inline-flex items-stretch -space-x-px">
                 <li>
-                  <a
+                  <Link
                     href="#"
                     className="flex items-center justify-center h-full py-1.5 px-3 ml-0 text-gray-500 bg-white rounded-l-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
                   >
@@ -1814,51 +1814,51 @@ export default function Home() {
                         clipRule="evenodd"
                       ></path>
                     </svg>
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
+                  <Link
                     href="#"
                     className="flex items-center justify-center px-3 py-2 text-sm leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
                   >
                     1
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
+                  <Link
                     href="#"
                     className="flex items-center justify-center px-3 py-2 text-sm leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
                   >
                     2
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
+                  <Link
                     href="#"
                     aria-current="page"
                     className="z-10 flex items-center justify-center px-3 py-2 text-sm leading-tight border text-blue-600 bg-blue-50 border-blue-300 hover:bg-blue-100 hover:text-blue-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white"
                   >
                     3
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
+                  <Link
                     href="#"
                     className="flex items-center justify-center px-3 py-2 text-sm leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
                   >
                     ...
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
+                  <Link
                     href="#"
                     className="flex items-center justify-center px-3 py-2 text-sm leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
                   >
                     100
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
+                  <Link
                     href="#"
                     className="flex items-center justify-center h-full py-1.5 px-3 leading-tight text-gray-500 bg-white rounded-r-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
                   >
@@ -1876,7 +1876,7 @@ export default function Home() {
                         clipRule="evenodd"
                       ></path>
                     </svg>
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </nav>

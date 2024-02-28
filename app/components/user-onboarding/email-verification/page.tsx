@@ -1,21 +1,22 @@
 import { APP_NAME, LOGO } from "@/app/public/config";
+import Link from "next/link";
 
 export default function EmailVerification() {
   return (
     <section className="py-8 bg-white dark:bg-gray-900 lg:py-0">
       <div className="lg:flex">
-        <div className="hidden w-full max-w-md p-12 lg:h-screen lg:block bg-primary-600">
+        <div className="hidden w-full max-w-md p-12 lg:h-screen lg:block bg-blue-600">
           <div className="flex items-center mb-8 space-x-4">
-            <a
+            <Link
               href="#"
               className="flex items-center text-2xl font-semibold text-white"
             >
               <img className="w-8 h-8 mr-2" src={LOGO} />
               {APP_NAME}
-            </a>
-            <a
+            </Link>
+            <Link
               href="#"
-              className="inline-flex items-center text-sm font-medium text-primary-100 hover:text-white"
+              className="inline-flex items-center text-sm font-medium text-blue-100 hover:text-white"
             >
               <svg
                 className="w-6 h-6 mr-1"
@@ -30,11 +31,11 @@ export default function EmailVerification() {
                 ></path>
               </svg>
               Go back
-            </a>
+            </Link>
           </div>
-          <div className="block p-8 text-white rounded-lg bg-primary-500">
+          <div className="block p-8 text-white rounded-lg bg-blue-500">
             <h3 className="mb-1 text-2xl font-semibold">Your selected plan</h3>
-            <p className="mb-4 font-light text-primary-100 sm:text-lg">
+            <p className="mb-4 font-light text-blue-100 sm:text-lg">
               30-day free trial
             </p>
             {/* <!-- List --> */}
@@ -132,16 +133,16 @@ export default function EmailVerification() {
         <div className="flex items-center mx-auto md:w-[42rem] px-4 md:px-8 xl:px-0">
           <div className="w-full">
             <div className="flex items-center justify-center mb-8 space-x-4 lg:hidden">
-              <a href="#" className="flex items-center text-2xl font-semibold">
+              <Link href="#" className="flex items-center text-2xl font-semibold">
                 <img
                   className="w-8 h-8 mr-2"
                   src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/logo.svg"
                 />
                 <span className="text-gray-900 dark:text-white">Flowbite</span>
-              </a>
+              </Link>
             </div>
             <ol className="flex items-center mb-6 text-sm font-medium text-center text-gray-500 dark:text-gray-400 lg:mb-12 sm:text-base">
-              <li className="flex items-center text-primary-600 dark:text-primary-500 sm:after:content-[''] after:w-12 after:h-1 after:border-b after:border-gray-200 after:border-1 after:hidden sm:after:inline-block after:mx-6 xl:after:mx-10 dark:after:border-gray-700">
+              <li className="flex items-center text-blue-600 dark:text-blue-500 sm:after:content-[''] after:w-12 after:h-1 after:border-b after:border-gray-200 after:border-1 after:hidden sm:after:inline-block after:mx-6 xl:after:mx-10 dark:after:border-gray-700">
                 <div className="flex items-center sm:block after:content-['/'] sm:after:hidden after:mx-2 after:font-light after:text-gray-200 dark:after:text-gray-500">
                   <svg
                     className="w-4 h-4 mr-2 sm:mb-2 sm:w-6 sm:h-6 sm:mx-auto shrink-0"
@@ -158,7 +159,7 @@ export default function EmailVerification() {
                   Personal <span className="hidden sm:inline-flex">Info</span>
                 </div>
               </li>
-              <li className="flex items-center text-primary-600 dark:text-primary-500 after:content-[''] after:w-12 after:h-1 after:border-b after:border-gray-200 after:border-1 after:hidden sm:after:inline-block after:mx-6 xl:after:mx-10 dark:after:border-gray-700">
+              <li className="flex items-center text-blue-600 dark:text-blue-500 after:content-[''] after:w-12 after:h-1 after:border-b after:border-gray-200 after:border-1 after:hidden sm:after:inline-block after:mx-6 xl:after:mx-10 dark:after:border-gray-700">
                 <div className="flex items-center sm:block after:content-['/'] sm:after:hidden after:mx-2 after:font-light after:text-gray-200 dark:after:text-gray-500">
                   <svg
                     className="w-4 h-4 mr-2 sm:mb-2 sm:w-6 sm:h-6 sm:mx-auto shrink-0"
@@ -200,7 +201,7 @@ export default function EmailVerification() {
                     type="text"
                     maxLength={1}
                     id="code-1"
-                    className="block w-12 h-12 py-3 text-2xl font-extrabold text-center text-gray-900 bg-white border border-gray-300 rounded-lg sm:py-4 sm:text-4xl sm:w-16 sm:h-16 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                    className="block w-12 h-12 py-3 text-2xl font-extrabold text-center text-gray-900 bg-white border border-gray-300 rounded-lg sm:py-4 sm:text-4xl sm:w-16 sm:h-16 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                     required
                   />
                 </div>
@@ -212,7 +213,7 @@ export default function EmailVerification() {
                     type="text"
                     maxLength={1}
                     id="code-2"
-                    className="block w-12 h-12 py-3 text-2xl font-extrabold text-center text-gray-900 bg-white border border-gray-300 rounded-lg sm:py-4 sm:text-4xl sm:w-16 sm:h-16 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                    className="block w-12 h-12 py-3 text-2xl font-extrabold text-center text-gray-900 bg-white border border-gray-300 rounded-lg sm:py-4 sm:text-4xl sm:w-16 sm:h-16 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                     required
                   />
                 </div>
@@ -224,7 +225,7 @@ export default function EmailVerification() {
                     type="text"
                     maxLength={1}
                     id="code-3"
-                    className="block w-12 h-12 py-3 text-2xl font-extrabold text-center text-gray-900 bg-white border border-gray-300 rounded-lg sm:py-4 sm:text-4xl sm:w-16 sm:h-16 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                    className="block w-12 h-12 py-3 text-2xl font-extrabold text-center text-gray-900 bg-white border border-gray-300 rounded-lg sm:py-4 sm:text-4xl sm:w-16 sm:h-16 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                     required
                   />
                 </div>
@@ -236,7 +237,7 @@ export default function EmailVerification() {
                     type="text"
                     maxLength={1}
                     id="code-4"
-                    className="block w-12 h-12 py-3 text-2xl font-extrabold text-center text-gray-900 bg-white border border-gray-300 rounded-lg sm:py-4 sm:text-4xl sm:w-16 sm:h-16 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                    className="block w-12 h-12 py-3 text-2xl font-extrabold text-center text-gray-900 bg-white border border-gray-300 rounded-lg sm:py-4 sm:text-4xl sm:w-16 sm:h-16 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                     required
                   />
                 </div>
@@ -249,7 +250,7 @@ export default function EmailVerification() {
                     type="text"
                     maxLength={1}
                     id="code-5"
-                    className="block w-12 h-12 py-3 text-2xl font-extrabold text-center text-gray-900 bg-white border border-gray-300 rounded-lg sm:py-4 sm:text-4xl sm:w-16 sm:h-16 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                    className="block w-12 h-12 py-3 text-2xl font-extrabold text-center text-gray-900 bg-white border border-gray-300 rounded-lg sm:py-4 sm:text-4xl sm:w-16 sm:h-16 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                     required
                   />
                 </div>
@@ -261,7 +262,7 @@ export default function EmailVerification() {
                     type="text"
                     maxLength={1}
                     id="code-6"
-                    className="block w-12 h-12 py-3 text-2xl font-extrabold text-center text-gray-900 bg-white border border-gray-300 rounded-lg sm:py-4 sm:text-4xl sm:w-16 sm:h-16 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                    className="block w-12 h-12 py-3 text-2xl font-extrabold text-center text-gray-900 bg-white border border-gray-300 rounded-lg sm:py-4 sm:text-4xl sm:w-16 sm:h-16 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                     required
                   />
                 </div>
@@ -270,17 +271,19 @@ export default function EmailVerification() {
                 Make sure to keep this window open while check your inbox.
               </p>
               <div className="flex space-x-3">
-                <a
-                  href="#"
-                  className="text-center items-center w-full py-2.5 sm:py-3.5 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+                <Link
+                  href="/components/user-onboarding/account-details"
+                  className="text-center items-center w-full py-2.5 sm:py-3.5 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
                 >
                   Prev: Account Info
-                </a>
+                </Link>
                 <button
                   type="submit"
-                  className="w-full text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 sm:py-3.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+                  className="w-full text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 sm:py-3.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                 >
-                  Verify account
+                  <Link href="/components/user-onboarding/success-message">
+                    Verify account
+                  </Link>
                 </button>
               </div>
             </form>

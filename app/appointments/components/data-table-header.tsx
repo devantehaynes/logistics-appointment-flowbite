@@ -6,6 +6,7 @@ import {
   SearchIcon,
   SettingsIcon,
 } from "lucide-react";
+import Link from "next/link";
 
 export default function TableHeader() {
   return (
@@ -157,29 +158,29 @@ export default function TableHeader() {
                     aria-labelledby="configurationDropdownButton"
                   >
                     <li>
-                      <a
+                      <Link
                         href="#"
                         className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                       >
                         By Category
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a
+                      <Link
                         href="#"
                         className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                       >
                         By Brand
-                      </a>
+                      </Link>
                     </li>
                   </ul>
                   <div className="py-1">
-                    <a
+                    <Link
                       href="#"
                       className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
                     >
                       Reset
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>

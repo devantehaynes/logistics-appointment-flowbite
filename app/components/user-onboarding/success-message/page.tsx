@@ -1,21 +1,22 @@
 import { APP_NAME, LOGO } from "@/app/public/config";
+import Link from "next/link";
 
 export default function SuccessMessage() {
   return (
     <section className="py-8 bg-white dark:bg-gray-900 lg:py-0">
       <div className="lg:flex">
-        <div className="hidden w-full max-w-md p-12 lg:h-screen lg:block bg-primary-600">
+        <div className="hidden w-full max-w-md p-12 lg:h-screen lg:block bg-blue-600">
           <div className="flex items-center mb-8 space-x-4">
-            <a
+            <Link
               href="#"
               className="flex items-center text-2xl font-semibold text-white"
             >
               <img className="w-8 h-8 mr-2" src={LOGO} />
               {APP_NAME}
-            </a>
-            <a
+            </Link>
+            <Link
               href="#"
-              className="inline-flex items-center text-sm font-medium text-primary-100 hover:text-white"
+              className="inline-flex items-center text-sm font-medium text-blue-100 hover:text-white"
             >
               <svg
                 className="w-6 h-6 mr-1"
@@ -30,11 +31,11 @@ export default function SuccessMessage() {
                 ></path>
               </svg>
               Go back
-            </a>
+            </Link>
           </div>
-          <div className="block p-8 text-white rounded-lg bg-primary-500">
+          <div className="block p-8 text-white rounded-lg bg-blue-500">
             <h3 className="mb-1 text-2xl font-semibold">Your selected plan</h3>
-            <p className="mb-4 font-light text-primary-100 sm:text-lg">
+            <p className="mb-4 font-light text-blue-100 sm:text-lg">
               30-day free trial
             </p>
             {/* <!-- List --> */}
@@ -132,16 +133,16 @@ export default function SuccessMessage() {
         <div className="flex items-center mx-auto md:w-[42rem] px-4 md:px-8 xl:px-0">
           <div className="w-full">
             <div className="flex items-center justify-center mb-8 space-x-4 lg:hidden">
-              <a href="#" className="flex items-center text-2xl font-semibold">
+              <Link href="#" className="flex items-center text-2xl font-semibold">
                 <img
                   className="w-8 h-8 mr-2"
                   src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/logo.svg"
                 />
                 <span className="text-gray-900 dark:text-white">Flowbite</span>
-              </a>
+              </Link>
             </div>
             <ol className="flex items-center mb-6 text-sm font-medium text-center text-gray-500 dark:text-gray-400 lg:mb-12 sm:text-base">
-              <li className="flex items-center text-primary-600 dark:text-primary-500 sm:after:content-[''] after:w-12 after:h-1 after:border-b after:border-gray-200 after:border-1 after:hidden sm:after:inline-block after:mx-6 xl:after:mx-10 dark:after:border-gray-700">
+              <li className="flex items-center text-blue-600 dark:text-blue-500 sm:after:content-[''] after:w-12 after:h-1 after:border-b after:border-gray-200 after:border-1 after:hidden sm:after:inline-block after:mx-6 xl:after:mx-10 dark:after:border-gray-700">
                 <div className="flex items-center sm:block after:content-['/'] sm:after:hidden after:mx-2 after:font-light after:text-gray-200 dark:after:text-gray-500">
                   <svg
                     className="w-4 h-4 mr-2 sm:mb-2 sm:w-6 sm:h-6 sm:mx-auto shrink-0"
@@ -158,7 +159,7 @@ export default function SuccessMessage() {
                   Personal <span className="hidden sm:inline-flex">Info</span>
                 </div>
               </li>
-              <li className="flex items-center text-primary-600 dark:text-primary-500 after:content-[''] after:w-12 after:h-1 after:border-b after:border-gray-200 after:border-1 after:hidden sm:after:inline-block after:mx-6 xl:after:mx-10 dark:after:border-gray-700">
+              <li className="flex items-center text-blue-600 dark:text-blue-500 after:content-[''] after:w-12 after:h-1 after:border-b after:border-gray-200 after:border-1 after:hidden sm:after:inline-block after:mx-6 xl:after:mx-10 dark:after:border-gray-700">
                 <div className="flex items-center sm:block after:content-['/'] sm:after:hidden after:mx-2 after:font-light after:text-gray-200 dark:after:text-gray-500">
                   <svg
                     className="w-4 h-4 mr-2 sm:mb-2 sm:w-6 sm:h-6 sm:mx-auto shrink-0"
@@ -175,7 +176,7 @@ export default function SuccessMessage() {
                   Account <span className="hidden sm:inline-flex">Info</span>
                 </div>
               </li>
-              <li className="flex items-center text-primary-600 dark:text-primary-500">
+              <li className="flex items-center text-blue-600 dark:text-blue-500">
                 <div className="flex items-center sm:block">
                   <svg
                     className="w-4 h-4 mr-2 sm:mb-2 sm:w-6 sm:h-6 sm:mx-auto shrink-0"
@@ -211,12 +212,12 @@ export default function SuccessMessage() {
             <p className="mb-4 font-light text-gray-500 dark:text-gray-400 md:mb-6">
               You have successfully verified your account.
             </p>
-            <a
-              href="#"
-              className="block w-full text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 sm:py-3.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+            <Link
+              href="/"
+              className="block w-full text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 sm:py-3.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
             >
               Log in to your Account
-            </a>
+            </Link>
           </div>
         </div>
       </div>

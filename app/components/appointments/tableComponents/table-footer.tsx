@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function TableFooter() {
   return (
     <div className="relative overflow-hidden bg-white rounded-b-lg shadow-md dark:bg-gray-800">
@@ -17,7 +19,7 @@ export default function TableFooter() {
         </span>
         <ul className="inline-flex items-stretch -space-x-px">
           <li>
-            <a
+            <Link
               href="#"
               className="flex items-center justify-center h-full py-1.5 px-3 ml-0 text-gray-500 bg-white rounded-l-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
             >
@@ -35,51 +37,51 @@ export default function TableFooter() {
                   clipRule="evenodd"
                 ></path>
               </svg>
-            </a>
+            </Link>
           </li>
           <li>
-            <a
+            <Link
               href="#"
               className="flex items-center justify-center px-3 py-2 text-sm leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
             >
               1
-            </a>
+            </Link>
           </li>
           <li>
-            <a
+            <Link
               href="#"
               className="flex items-center justify-center px-3 py-2 text-sm leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
             >
               2
-            </a>
+            </Link>
           </li>
           <li>
-            <a
+            <Link
               href="#"
               aria-current="page"
               className="z-10 flex items-center justify-center px-3 py-2 text-sm leading-tight border text-primary-600 bg-primary-50 border-primary-300 hover:bg-primary-100 hover:text-primary-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white"
             >
               3
-            </a>
+            </Link>
           </li>
           <li>
-            <a
+            <Link
               href="#"
               className="flex items-center justify-center px-3 py-2 text-sm leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
             >
               ...
-            </a>
+            </Link>
           </li>
           <li>
-            <a
+            <Link
               href="#"
               className="flex items-center justify-center px-3 py-2 text-sm leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
             >
               100
-            </a>
+            </Link>
           </li>
           <li>
-            <a
+            <Link
               href="#"
               className="flex items-center justify-center h-full py-1.5 px-3 leading-tight text-gray-500 bg-white rounded-r-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
             >
@@ -97,7 +99,7 @@ export default function TableFooter() {
                   clipRule="evenodd"
                 ></path>
               </svg>
-            </a>
+            </Link>
           </li>
         </ul>
       </nav>

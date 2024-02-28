@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function TableActions() {
   return (
     <div className="mt-3 md:mt-0">
@@ -31,21 +33,21 @@ export default function TableActions() {
           aria-labelledby="actionsDropdownButton"
         >
           <li>
-            <a
+            <Link
               href="#"
               className="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
             >
               Mass Edit
-            </a>
+            </Link>
           </li>
         </ul>
         <div className="py-1">
-          <a
+          <Link
             href="#"
             className="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
           >
             Delete all
-          </a>
+          </Link>
         </div>
       </div>
     </div>
