@@ -134,7 +134,10 @@ export default function UserOnboarding() {
         <div className="flex items-center mx-auto md:w-[42rem] px-4 md:px-8 xl:px-0">
           <div className="w-full">
             <div className="flex items-center justify-center mb-8 space-x-4 lg:hidden">
-              <Link href="#" className="flex items-center text-2xl font-semibold">
+              <Link
+                href="#"
+                className="flex items-center text-2xl font-semibold"
+              >
                 <img
                   className="w-8 h-8 mr-2"
                   src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/logo.svg"
@@ -236,7 +239,7 @@ export default function UserOnboarding() {
             <p className="mt-4 text-sm font-light text-gray-500 dark:text-gray-400">
               Already have an account?{" "}
               <Link
-                href="#"
+                href="/components/log-in"
                 className="font-medium text-blue-600 hover:underline dark:text-blue-500"
               >
                 Login here
